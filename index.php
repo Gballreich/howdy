@@ -12,7 +12,11 @@ $f3 = Base::instance();
 
 //define a default route
 $f3->route('GET /', function(){
-    echo '<h1>Howdy Partner!</h1>';
+    //echo '<h1>Howdy Partner!</h1>';
+
+    //render a view page
+    $view = new Template();
+    echo $view->render('views/home.html');
 });
 
 //run fat free
